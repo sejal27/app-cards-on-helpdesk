@@ -261,7 +261,7 @@ app.get("/", async (req, res) => {
     const contact = await getContact(accessToken);
     // res.write(`<h4>Access token: ${accessToken}</h4>`);
     res.write(
-      `<h2>Congratulations! You just installed Zenquotes Cats app!</h2>`
+      `<h2>Congratulations! You just installed a new app!</h2>`
     );
 
     displayContactName(res, contact);
@@ -270,8 +270,7 @@ app.get("/", async (req, res) => {
     );
     res.write(`<img src="/images/config.gif" alt="config">`);
   } else {
-    res.write(`<h2>Get some Zen in your life with this ZenQuotes App</h2>`);
-    res.write(`<img src="/images/card.png" alt="zenquote-cats">`);
+    res.write(`<h2>App card demos/h2>`);
     res.write(
       `<br><br><a href="/install" class="install-btn">Install the app</a>`
     );
@@ -287,19 +286,6 @@ app.get("/error", (req, res) => {
   res.setHeader("Content-Type", "text/html");
   res.write(`<h4>Error: ${req.query.msg}</h4>`);
   res.end();
-});
-
-// Get quotes from Zen Quotes API
-app.get("/quotes", async (req, res) => {
-  try {
-    const result = await request.get("https://zenquotes.io/api/random");
-    const quote = JSON.parse(result)[0];
-    console.log(quote);
-    res.json(quote);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("An error occurred while fetching the quote.");
-  }
 });
 
 module.exports = app;

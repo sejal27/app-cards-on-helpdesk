@@ -1,7 +1,7 @@
 {
-  "name": "sample-oauth-quickstart",
+  "name": "app-cards-demo-be",
   "version": "1.0.0",
-  "description": "sample quickstart app for hubspot with Vercel",
+  "description": "Sample backend hosted on vercel",
   "main": "index.js",
   "scripts": {
     "dev": "vercel dev"
