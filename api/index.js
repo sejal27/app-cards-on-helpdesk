@@ -48,6 +48,7 @@ const REDIRECT_URI = `https://${
   process.env.DOMAIN || `localhost:${PORT}`
 }/oauth-callback`;
 
+console.log("REDIRECT_URI", REDIRECT_URI);
 // const REDIRECT_URI = `https://${process.env.VERCEL_URL}/oauth-callback`;
 //===========================================================================//
 
@@ -289,6 +290,5 @@ app.get("/error", (req, res) => {
 });
 
 module.exports = app;
-console.log(PORT);
 
 app.listen(PORT, () => console.log(`=== Starting your app on localhost ===`));
