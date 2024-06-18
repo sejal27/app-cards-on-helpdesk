@@ -271,7 +271,10 @@ app.get("/", async (req, res) => {
     );
     res.write(`<img src="/images/config.gif" alt="config">`);
   } else {
-    res.write(`<h2>App card demos</h2>`);
+    res.write(`<h2>App card treasure hunt!</h2>`);
+    res.write(`<img src="/images/treasurehunt.png" alt="treasure hunt image">`);
+    res.write(`<p>App cards are available on record page middle columns, right sidebars, and preview sidebars. This app contains several cards for many of these locations across all standard objects.</p>`);
+    res.write(`<p>Your mission, if you choose to accept, is to find out how many app cards are installed by this app, configure them successfully, and see what they display when you open them on locations!</p>`);
     res.write(
       `<br><br><a href="/install" class="install-btn">Install the app</a>`
     );
