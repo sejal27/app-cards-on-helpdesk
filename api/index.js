@@ -40,6 +40,8 @@ if (process.env.SCOPE) {
   SCOPES = process.env.SCOPE.split(/ |, ?|%20/).join(" ");
 }
 
+console.log("SCOPES", SCOPES);
+
 // On successful install, users will be redirected to /oauth-callback
 // const REDIRECT_URI = `https://zenquotes-with-hubspot.vercel.app/oauth-callback`;
 
