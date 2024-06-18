@@ -267,7 +267,7 @@ app.get("/", async (req, res) => {
 
     displayContactName(res, contact);
     res.write(
-      `<p>After you install this app, open contact record page, click <b>Customize this tab</b> in the middle column, and find 'ZenQuote Cats' card in <b>Extensions</b> category. Have fun!</p>`
+      `<p>After you install this app, open contact record page, click <b>Customize this tab</b> in the middle column, and find your card in <b>Extensions</b> category. Have fun!</p>`
     );
     res.write(`<img src="/images/config.gif" alt="config">`);
   } else {
